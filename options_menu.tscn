@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7kppin402kge"]
+
+[ext_resource type="Texture2D" uid="uid://foh1mb7qjw8t" path="res://assets/screens/OptionsMenu.png" id="1_t1lix"]
+[ext_resource type="Script" uid="uid://biesrtfmi83b1" path="res://Scripts.gd/return_options_menu.gd" id="2_4gmlt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.8, 16.32)
+texture = ExtResource("1_t1lix")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1030.0
+offset_top = 8.0
+offset_right = 1038.0
+offset_bottom = 16.0
+scale = Vector2(14.32, 7.24)
+flat = true
+script = ExtResource("2_4gmlt")

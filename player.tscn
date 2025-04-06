@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://x2rkd0a86ch3"]
+
+[ext_resource type="Script" uid="uid://b0wiu0rkjiok0" path="res://Scripts.gd/player.gd" id="1_sweqy"]
+[ext_resource type="Texture2D" uid="uid://byguja2o3iw4x" path="res://assets/player/Idle.png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cv31cbmcff12h" path="res://assets/player/up0.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://b226hnji2bnvc" path="res://assets/player/up1.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://0ocn3evea071" path="res://assets/player/walk0.png" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cy037yw0m0je4" path="res://assets/player/walk1.png" id="5_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cyuek01xsb8ru" path="res://assets/screens/MENUBUTTON.png" id="7_1jxqw"]
+[ext_resource type="Script" uid="uid://gjqgjmihmvud" path="res://Scripts.gd/main_menu_button.gd" id="8_dw050"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2hs0m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2hs0m")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2hs0m"]
+radius = 27.0
+
+[node name="Player" type="Area2D"]
+z_index = 4
+script = ExtResource("1_sweqy")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_sh265")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_2hs0m")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 4
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenuButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -119.0
+offset_top = 5.0
+offset_right = 152.0
+offset_bottom = 145.0
+grow_horizontal = 0
+scale = Vector2(0.41173, 0.391748)
+icon = ExtResource("7_1jxqw")
+flat = true
+script = ExtResource("8_dw050")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
