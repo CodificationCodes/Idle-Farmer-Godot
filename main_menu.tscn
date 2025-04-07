@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqfop8yx1lde5"]
+[gd_scene load_steps=5 format=3 uid="uid://cqfop8yx1lde5"]
 
 [ext_resource type="Texture2D" uid="uid://dkwnmgjhs2bwb" path="res://assets/screens/Main menu.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://cnns5nrkyijir" path="res://Scripts.gd/playbutton.gd" id="2_7vrkn"]
 [ext_resource type="Script" uid="uid://cdje677t8owng" path="res://Scripts.gd/options_button.gd" id="3_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://b0xwaceavupuc" path="res://assets/screens/car.jpg" id="4_jix8l"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -42,3 +43,11 @@ offset_bottom = 483.0
 scale = Vector2(29.5124, 14.8309)
 flat = true
 script = ExtResource("3_fu7sn")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = -85.0
+offset_right = 1171.0
+offset_bottom = 137.0
+texture = ExtResource("4_jix8l")
