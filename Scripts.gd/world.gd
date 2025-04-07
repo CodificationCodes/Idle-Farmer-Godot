@@ -4,9 +4,9 @@ extends Node
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
-		print("Right-click detected!")
+		print("Right-click detected")
 
-		# get mouse pos
+		# get mouse pos/water dirt
 		var mouse_pos: Vector2 = tile_map.get_global_mouse_position()
 
 		var local_mouse_pos: Vector2 = tile_map.to_local(mouse_pos)
@@ -22,7 +22,10 @@ func _process(delta):
 		elif tileSource == 2 and tile_map.get_cell_atlas_coords(0, tile_map_pos) == Vector2i(2, 0):
 			tile_map.set_cell(0, tile_map_pos, 3, Vector2i(2, 0))
 			
-		# debugging simga
-		print("Mouse Position (global):", mouse_pos)
+			print("Mouse Position (global):", mouse_pos)
 		print("Mouse Position (local to tilemap):", local_mouse_pos)
 		print("Tile Map Position:", tile_map_pos)
+
+	if Input.is_action_just_pressed("plant"):
+		if tileSource == 3 and tile_map.get_cell_atlas_coords(0, tile_map_pos) == Vector2i(1,0):
+			tile_map.set_cell(0, tile_map_pos, 3, Vector2i())
