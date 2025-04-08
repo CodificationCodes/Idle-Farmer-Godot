@@ -28,4 +28,4 @@ func _process(delta):
 
 	if Input.is_action_just_pressed("plant"):
 		if tileSource == 3 and tile_map.get_cell_atlas_coords(0, tile_map_pos) == Vector2i(1,0):
-			tile_map.set_cell(0, tile_map_pos, 3, Vector2i())
+			tile_map.set_cell(0, tile_map_pos, 5, Vector2i(0,0), 0)
