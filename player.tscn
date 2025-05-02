@@ -53,7 +53,7 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_sh265")
-animation = &"walk"
+animation = &"up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -7)
@@ -61,6 +61,8 @@ shape = SubResource("CircleShape2D_2hs0m")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 4
+
+[node name="Beetroot Timer" type="Timer" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
