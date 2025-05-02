@@ -1,16 +1,7 @@
 Hello and thank you for viewing Idle Farmer! It has been a pleasure creating this game and overcoming the challenges that came with it.
 I hope to work on similiar projects in the future, and thank you for coming around! ❤️
 
- _ __  _ __ ___  _ __                                
-| '_ \| '__/ _ \| '_ \                               
-| |_) | | | (_) | |_) |                              
-| .__/|_|  \___/| .__/                               
-|_|             |_|                                  
-               _ _  __ _           _   _             
-  ___ ___   __| (_)/ _(_) ___ __ _| |_(_) ___  _ __  
- / __/ _ \ / _` | | |_| |/ __/ _` | __| |/ _ \| '_ \ 
-| (_| (_) | (_| | |  _| | (_| (_| | |_| | (_) | | | |
- \___\___/ \__,_|_|_| |_|\___\__,_|\__|_|\___/|_| |_|
+print("license")
 
  MIT License
 
