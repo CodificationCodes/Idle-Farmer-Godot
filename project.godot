@@ -13,7 +13,8 @@ config_version=5
 config/name="Idle Farmer"
 run/main_scene="uid://cqfop8yx1lde5"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="uid://drux1r6muyhbj"
+config/icon="uid://b0xwaceavupuc"
 
 [display]
 
