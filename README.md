@@ -3,7 +3,7 @@
 Hello and thank you for viewing Idle Farmer! It has been a pleasure creating this game and overcoming the challenges that came with it.
 I hope to work on similiar projects in the future, and thank you for coming around! ❤️
 ```
-print("license")
+print(license)
 ```
 > MIT License
 >
